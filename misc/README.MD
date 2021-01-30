@@ -18,6 +18,15 @@ Site is available here:
 (need link)
 You can view posts without logging in, clicking My Account or Add Post will direct you to log in if you haven't.
 
+## User Stories
+As a user I want to…
+log in with google oauth
+see a list of posts from other users showing information about their characters
+view the post in full detail to see all the information they entered about that character
+when on the view post page, see comments from other users and post my own comments
+edit posts and comments i have made
+delete posts and comments i have made
+view my account information and change the display name on my account
 
 ## Next Steps:
 vote on posts / comments
