@@ -1,1 +1,6 @@
-2. set up the basic server.js stuff
+4. set up user model
+5. set up config/passport
+6. make sure user controller adds new accounts?
+
+//
+if you get to add character make sure it tries to log you in if you aren't

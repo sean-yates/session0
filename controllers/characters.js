@@ -9,7 +9,7 @@ function feed(req, res, next) {
      res.render('feed', {
         characters,
       user: req.user,
-      Title: 'Character Feed',
+      title: 'Character Feed',
       });
    });
   }

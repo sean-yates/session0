@@ -3,7 +3,10 @@ const morgan = require('morgan');
 const session = require('express-session');
 const methodOverride = require('method-override');
 const passport = require('passport')
+
+
 const port = 3000;
+// const port = process.env.PORT
 
 
 // We'll need to load the env vars
