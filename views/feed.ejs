@@ -13,6 +13,6 @@
     user <%= character.user.name %><br />
     <% if (currentUser !== undefined && currentUser._id.equals(character.user._id)) { %>
         <form method="POST" action="/characters/<%= character._id %>?_method=DELETE">
-        <button type="submit">Delete Character</button><% } %><br />
+        <button type="submit">Delete Character</button><a href="/characters/<%= character._id %>/edit">Edit character</a><% } %><br />
 <% }) %>
   

@@ -6,6 +6,7 @@ module.exports = {
     create,
     deleteCharacter,
     viewCharacter,
+    editCharacter,
   };
 
 // show all characters
@@ -57,6 +58,20 @@ function newCharacter(req, res) {
         currentCharacter,
        currentUser: req.user,
        title: 'View Character',
+       });
+    });
+  }
+
+  // edit character page
+
+  function editCharacter(req,res){
+    db.Character.findById(req.params.id).
+    populate('user').
+    exec( function(err, currentCharacter) {
+      res.render('editCharacter', {
+        currentCharacter,
+       currentUser: req.user,
+       title: 'Edit Character',
        });
     });
   }

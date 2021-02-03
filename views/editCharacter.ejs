@@ -1,0 +1,23 @@
+<%- include('./partials/header') %>
+
+<form action="/characters" method="POST">
+    Name:<br />
+    <input type="text" name="name" value="<%= currentCharacter.name %>"required><br />
+    Image Link:<br />
+    <input type="text" name="image" value="<%= currentCharacter.image %>"><br />
+    System:<br />
+    <input type="text" name="system" value="<%= currentCharacter.system %>"required><br />
+    Class:<br />
+    <input type="text" name="class" value="<%= currentCharacter.class %>"><br />
+    Intro:<br />
+    <input type="text" name="intro" value="<%= currentCharacter.intro %>"required><br />
+    Height:<br />
+    <input type="text" name="height" value="<%= currentCharacter.height %>"><br />
+    Weight:<br />
+    <input type="text" name="weight" value="<%= currentCharacter.weight %>"><br />
+    Physical Description:<br />
+    <input type="text" name="description" value="<%= currentCharacter.description %>"><br />
+    About:<br />
+    <textarea name="about" style="width:250px;height:150px;"><%= currentCharacter.about %></textarea>
+    <input type="submit" value="edit character">
+    </form>
