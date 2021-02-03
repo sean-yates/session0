@@ -2,6 +2,7 @@ const db = require('../models');
 
 module.exports = {
     feed,
+    create,
   };
 
 function feed(req, res, next) {
@@ -12,4 +13,13 @@ function feed(req, res, next) {
       title: 'Character Feed',
       });
    });
+  }
+
+
+  function create(req,res){
+    db.Flight.create( req.body, (err, createdCharacter ) => {
+      if (err) return console.log(err);
+      
+      res.redirect('/characters')
+    });
   }

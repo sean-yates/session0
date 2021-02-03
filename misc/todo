@@ -1,6 +1,29 @@
-4. set up user model
-5. set up config/passport
-6. make sure user controller adds new accounts?
+8. add post character router
+9. add post character ui
+10. add post character controller
+11. test adding characters // make sure it tries to log you in if you aren't
+12. add delete character router
+13. add delete character ui
+14. add delete character controller
+15. test delete and validate oauth works because you can only delete while logged in
+16. add edit character router
+17. add edit character ui
+18. add edit character controller
+19. test editing character
+20. add comment model
+21. add post comment router
+22. add post comment ui
+23. add post comment controller
+24. test adding comment // make sure it tries to log you in if you aren't
+25. add delete comment router
+26. add delete comment ui
+27. add delete comment controller
+28. test delete and validate oauth works because you can only delete while logged in
+29. add edit comment router
+30. add edit comment ui
+31. add edit comment controller
+32. test editing comment
 
 //
-if you get to add character make sure it tries to log you in if you aren't
+figure out styling
+get website on heroku
