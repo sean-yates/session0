@@ -2,9 +2,11 @@ const db = require('../models');
 
 module.exports = {
     feed,
+    newCharacter,
     create,
   };
 
+// show all characters
 function feed(req, res, next) {
     db.Character.find({}, function(err, characters) {
      res.render('feed', {
@@ -15,9 +17,15 @@ function feed(req, res, next) {
    });
   }
 
+// new character page
 
+function newCharacter(req, res) {
+  res.render('newCharacter', {title: 'New Character'})
+}
+
+// creation of new character
   function create(req,res){
-    db.Flight.create( req.body, (err, createdCharacter ) => {
+    db.Character.create( req.body, (err, createdCharacter ) => {
       if (err) return console.log(err);
       
       res.redirect('/characters')
