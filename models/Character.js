@@ -3,7 +3,10 @@ const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
     body: String,
-    created: Date,
+    created: {
+      type: Date,
+      default: () => Date.now()
+    },
     edited: Date,
     user: {
         type: Schema.Types.ObjectId,
@@ -15,7 +18,10 @@ const commentSchema = new Schema({
 const characterSchema = new Schema({
     name: String,
     image: String,
-    created: Date,
+    created: {
+      type: Date,
+      default: () => Date.now()
+    },
     system: String,
     class: String,
     intro: String,

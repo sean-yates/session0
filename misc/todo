@@ -1,29 +1,32 @@
-8. add post character router
-9. add post character ui
-10. add post character controller
-11. test adding characters // make sure it tries to log you in if you aren't
-12. add delete character router
-13. add delete character ui
-14. add delete character controller
-15. test delete and validate oauth works because you can only delete while logged in
-16. add edit character router
-17. add edit character ui
-18. add edit character controller
-19. test editing character
-20. add comment model
-21. add post comment router
-22. add post comment ui
-23. add post comment controller
-24. test adding comment // make sure it tries to log you in if you aren't
-25. add delete comment router
-26. add delete comment ui
-27. add delete comment controller
-28. test delete and validate oauth works because you can only delete while logged in
-29. add edit comment router
-30. add edit comment ui
-31. add edit comment controller
-32. test editing comment
+11. make character feed show characters
+test adding characters
+add view character ui
+add view character router
+add view character controller
+add delete character router
+add delete character ui
+add delete character controller
+test delete and validate oauth works because you can only delete while logged in
+add edit character router
+add edit character ui
+add edit character controller
+test editing character
+add comment model
+add post comment router
+add post comment ui
+add post comment controller
+test adding comment // make sure it tries to log you in if you aren't
+add delete comment router
+add delete comment ui
+add delete comment controller
+test delete and validate oauth works because you can only delete while logged in
+add edit comment router
+add edit comment ui
+add edit comment controller
+test editing comment
 
 //
+add maximum lenghts on some of the character values in ui and on model
+view character page
 figure out styling
 get website on heroku
