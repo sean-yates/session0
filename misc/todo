@@ -1,7 +1,4 @@
-19 add view character ui
-add view character router
-add view character controller
-add edit character router
+21 add edit character router
 add edit character ui
 add edit character controller
 test editing character
@@ -21,5 +18,6 @@ test editing comment
 
 //
 add maximum lenghts on some of the character values in ui and on model
+make pictures work (copy not insta?)
 figure out styling
 get website on heroku
