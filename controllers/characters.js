@@ -7,6 +7,7 @@ module.exports = {
     deleteCharacter,
     viewCharacter,
     editCharacter,
+    updateCharacter,
   };
 
 // show all characters
@@ -74,4 +75,27 @@ function newCharacter(req, res) {
        title: 'Edit Character',
        });
     });
+  }
+
+
+  // update character
+
+  function updateCharacter(req,res){
+    const id = req.params.id;
+  
+    db.Character.findByIdAndUpdate( 
+      id,
+      {
+        $set: {
+          ...req.body
+        },
+      },
+      {
+        new: true
+      },
+      ( err, updatedCharacter ) => {
+        if ( err ) return console.log( err );
+  
+        res.redirect(`/characters/${id}`)
+      });
   }

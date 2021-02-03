@@ -1,6 +1,6 @@
 <%- include('./partials/header') %>
 
-<form action="/characters" method="POST">
+<form action="/characters/<%= currentCharacter._id %>?_method=PUT" method="POST">
     Name:<br />
     <input type="text" name="name" value="<%= currentCharacter.name %>"required><br />
     Image Link:<br />
