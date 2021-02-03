@@ -11,8 +11,7 @@
     description <%= character.description %><br />
     about <%= character.about %><br />
     user <%= character.user %><br />
-    <% if (currentUser._id.equals(character.user._id)) { %>
-        <form method="POST" action="/character/<%= character._id %>?_method=DELETE">
-        <button type="submit">Delete Character</button><% } %><br />
+        <form method="POST" action="/characters/<%= character._id %>?_method=DELETE">
+        <button type="submit">Delete Character</button><br />
 <% }) %>
   

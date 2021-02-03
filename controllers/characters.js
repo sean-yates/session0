@@ -9,13 +9,15 @@ module.exports = {
 
 // show all characters
 function feed(req, res, next) {
-    db.Character.find({}, function(err, characters) {
-     res.render('feed', {
-        characters,
-      user: req.user,
-      title: 'Character Feed',
-      });
-   });
+    db.Character.find({}).
+    populate('user').
+    exec( function(err, characters) {
+      res.render('feed', {
+         characters,
+       currentUser: req.user,
+       title: 'Character Feed',
+       });
+    });
   }
 
 // new character page
