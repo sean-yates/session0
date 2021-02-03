@@ -1,12 +1,10 @@
-11. make character feed show characters
-test adding characters
-add view character ui
-add view character router
-add view character controller
-add delete character router
+14 add delete character router
 add delete character ui
 add delete character controller
 test delete and validate oauth works because you can only delete while logged in
+add view character ui
+add view character router
+add view character controller
 add edit character router
 add edit character ui
 add edit character controller
@@ -27,6 +25,5 @@ test editing comment
 
 //
 add maximum lenghts on some of the character values in ui and on model
-view character page
 figure out styling
 get website on heroku
