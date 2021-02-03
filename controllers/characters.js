@@ -5,6 +5,7 @@ module.exports = {
     newCharacter,
     create,
     deleteCharacter,
+    viewCharacter,
   };
 
 // show all characters
@@ -44,4 +45,18 @@ function newCharacter(req, res) {
       console.log("Successful deletion");
     });
     res.redirect(`/characters`);
+  }
+
+  // view character
+
+  function viewCharacter(req,res){
+    db.Character.findById(req.params.id).
+    populate('user').
+    exec( function(err, currentCharacter) {
+      res.render('viewCharacter', {
+        currentCharacter,
+       currentUser: req.user,
+       title: 'View Character',
+       });
+    });
   }

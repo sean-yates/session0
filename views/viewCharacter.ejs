@@ -1,0 +1,15 @@
+<%- include('./partials/header') %>
+
+<%= currentCharacter.name %>
+image <%= currentCharacter.image %><br />
+created <%= currentCharacter.created %><br />
+system <%= currentCharacter.system %><br />
+intro <%= currentCharacter.intro %><br />
+height <%= currentCharacter.height %><br />
+weight <%= currentCharacter.weight %><br />
+description <%= currentCharacter.description %><br />
+about <%= currentCharacter.about %><br />
+user <%= currentCharacter.user.name %><br />
+<% if (currentUser !== undefined && currentUser._id.equals(currentCharacter.user._id)) { %>
+    <form method="POST" action="/characters/<%= currentCharacter._id %>?_method=DELETE">
+    <button type="submit">Delete Character</button><% } %><br />

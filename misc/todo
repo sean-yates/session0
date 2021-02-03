@@ -1,7 +1,4 @@
-16. make sure user data shows up in feed
-add delete character ui
-test delete and validate oauth works because you can only delete while logged in
-add view character ui
+19 add view character ui
 add view character router
 add view character controller
 add edit character router
