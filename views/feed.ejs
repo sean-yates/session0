@@ -1,1 +1,14 @@
 <%- include('./partials/header') %>
+
+<% characters.forEach( character => { %>
+    <%= character.name %> <a href="/characters/<%= character._id %>">View character and comments</a><br />
+    image <%= character.image %><br />
+    created <%= character.created %><br />
+    system <%= character.system %><br />
+    intro <%= character.intro %><br />
+    height <%= character.height %><br />
+    weight <%= character.weight %><br />
+    description <%= character.description %><br />
+    about <%= character.about %><br />
+<% }) %>
+  
