@@ -21,8 +21,8 @@ user <%= currentCharacter.user.name %><br />
         </form>
         <% currentCharacter.comments.forEach( comment => { %>
             body <%= comment.body %><br />
-            user <%= comment.user %><br />
-            <% if (currentUser !== undefined && currentUser._id.equals(comment.user)) { // may need to alter this after we figure out populating the user %>
+            user <%= comment.user.name %><br />
+            <% if (currentUser !== undefined && currentUser._id.equals(comment.user._id)) { // may need to alter this after we figure out populating the user %>
                 <form method="POST" action="/characters/<%= currentCharacter._id %>/comments/<%= comment._id %>?_method=DELETE">
                 <button type="submit">Delete Comment</button><% } // edit comment link will go here as well%><br />
         <% }) %>

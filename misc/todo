@@ -1,7 +1,5 @@
-35
-make sure view character page populates comments, and populates user at the same time
+37
 change comment delete controller to work on ref model
-clear db to get rid of comments following old model
 
 
 
@@ -15,6 +13,7 @@ add edit comment controller
 test editing comment
 
 //
+make comment box only show up if you're logged in
 add maximum lenghts on some of the character values in ui and on model
 make pictures work (copy not insta?)
 figure out styling
