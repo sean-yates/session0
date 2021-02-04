@@ -15,10 +15,12 @@ user <%= currentCharacter.user.name %><br />
 
 
 
-    <form action="/characters/<%= currentCharacter._id %>/comments" method="POST">
+    <% if (currentUser) { %>
+        <form action="/characters/<%= currentCharacter._id %>/comments" method="POST">
         <textarea name="body" style="width:250px;height:150px;"></textarea>
         <input type="submit" value="add comment">
         </form>
+        <% } %>
         <% currentCharacter.comments.forEach( comment => { %>
             body <%= comment.body %><br />
             user <%= comment.user.name %><br />
