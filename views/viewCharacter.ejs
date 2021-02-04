@@ -17,7 +17,7 @@ user <%= currentCharacter.user.name %><br />
 
     <% if (currentUser) { %>
         <form action="/characters/<%= currentCharacter._id %>/comments" method="POST">
-        <textarea name="body" style="width:250px;height:150px;"></textarea>
+        <textarea name="body" maxlength="500" style="width:250px;height:150px;"></textarea>
         <input type="submit" value="add comment">
         </form>
         <% } %>
