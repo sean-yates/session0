@@ -1,0 +1,7 @@
+<%- include('./partials/header') %>
+
+<form action="/characters/<%= currentCharacterId %>/comments/<%= currentComment._id %>?_method=PUT" method="POST">
+    Comment:<br />
+    <textarea name="body" style="width:250px;height:150px;"><%= currentComment.body %></textarea>
+    <input type="submit" value="update comment">
+    </form>

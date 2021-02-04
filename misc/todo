@@ -1,12 +1,5 @@
-37
-change comment delete controller to work on ref model
+41
 
-
-
-add delete comment router
-add delete comment controller
-test delete and validate oauth works because you can only delete while logged in
-make comment user populate
 add edit comment router
 add edit comment ui
 add edit comment controller
@@ -14,7 +7,7 @@ test editing comment
 
 //
 make comment box only show up if you're logged in
-add maximum lenghts on some of the character values in ui and on model
+add maximum lenghts on some of the character and comment values in ui and on model
 make pictures work (copy not insta?)
 figure out styling
 get website on heroku
