@@ -1,12 +1,5 @@
-21 add edit character router
-add edit character ui
-add edit character controller
-test editing character
-add comment model
-add post comment router
-add post comment ui
-add post comment controller
-test adding comment // make sure it tries to log you in if you aren't
+28 make comments show up
+test adding comment
 add delete comment router
 add delete comment ui
 add delete comment controller

@@ -8,6 +8,7 @@ module.exports = {
     viewCharacter,
     editCharacter,
     updateCharacter,
+    createComment,
   };
 
 // show all characters
@@ -55,6 +56,7 @@ function newCharacter(req, res) {
     db.Character.findById(req.params.id).
     populate('user').
     exec( function(err, currentCharacter) {
+      if(err) console.log(err);
       res.render('viewCharacter', {
         currentCharacter,
        currentUser: req.user,
@@ -69,6 +71,7 @@ function newCharacter(req, res) {
     db.Character.findById(req.params.id).
     populate('user').
     exec( function(err, currentCharacter) {
+      if(err) console.log(err);
       res.render('editCharacter', {
         currentCharacter,
        currentUser: req.user,
@@ -99,3 +102,18 @@ function newCharacter(req, res) {
         res.redirect(`/characters/${id}`)
       });
   }
+
+
+  // COMMENTS
+
+  function createComment(req,res){
+    req.body.user = req.user
+    db.Character.findById(req.params.id).
+    exec(function(err, currentCharacter) {
+      if(err) console.log(err);
+
+      currentCharacter.comments.push(req.body)
+
+      res.redirect(`/characters/${req.params.id}`)
+  })
+}

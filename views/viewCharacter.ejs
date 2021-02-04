@@ -12,3 +12,10 @@ user <%= currentCharacter.user.name %><br />
 <% if (currentUser !== undefined && currentUser._id.equals(currentCharacter.user._id)) { %>
     <form method="POST" action="/characters/<%= currentCharacter._id %>?_method=DELETE">
     <button type="submit">Delete Character</button><% } %><br />
+
+
+
+    <form action="/characters/<%= currentCharacter._id %>/comments" method="POST">
+        <textarea name="about" style="width:250px;height:150px;"></textarea>
+        <input type="submit" value="add comment">
+        </form>
