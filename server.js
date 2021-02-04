@@ -23,6 +23,7 @@ require('./config/passport');
 // require our routes
 const userRoutes = require('./routes/user');
 const characterRoutes = require('./routes/characters');
+const commentRoutes = require('./routes/comments');
 
 // view engine setup
 app.set('view engine', 'ejs');
@@ -47,6 +48,7 @@ app.use(passport.session());
 // Mount Routers here
 app.use('/', userRoutes);
 app.use('/', characterRoutes);
+app.use('/', commentRoutes);
 
 
 

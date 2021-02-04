@@ -8,7 +8,6 @@ module.exports = {
     viewCharacter,
     editCharacter,
     updateCharacter,
-    createComment,
   };
 
 // show all characters
@@ -55,12 +54,20 @@ function newCharacter(req, res) {
   function viewCharacter(req,res){
     db.Character.findById(req.params.id).
     populate('user').
+    populate({
+      path: 'comments',
+      populate: {
+        path: 'user',
+      }
+    }).
     exec( function(err, currentCharacter) {
+      console.log(currentCharacter.comments)
       if(err) console.log(err);
+      console.log()
       res.render('viewCharacter', {
         currentCharacter,
-       currentUser: req.user,
-       title: 'View Character',
+        currentUser: req.user,
+        title: 'View Character',
        });
     });
   }
@@ -103,22 +110,3 @@ function newCharacter(req, res) {
       });
   }
 
-
-  // COMMENTS
-
-  function createComment(req,res){
-    console.log('*****START OF CREATING A COMMENT******')
-    req.body.user = req.user
-    
-    db.Character.findById(req.params.id).
-    exec(function(err, currentCharacter) {
-      if(err) console.log(err);
-
-      currentCharacter.comments.push(req.body)
-
-      currentCharacter.save(function(err) {
-        if(err) console.log(err);
-        res.redirect(`/characters/${req.params.id}`)
-      })
-  })
-}

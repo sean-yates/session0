@@ -1,27 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const commentSchema = new Schema({
-    body: String,
-    created: {
-      type: Date,
-      default: () => Date.now()
-    },
-    edited: Date,
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-       },
-})
-
-
 const characterSchema = new Schema({
     name: String,
     image: String,
-    created: {
-      type: Date,
-      default: () => Date.now()
-    },
     system: String,
     class: String,
     intro: String,
@@ -29,12 +11,14 @@ const characterSchema = new Schema({
     weight: String,
     description: String,
     about: String,
-    edited: Date,
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
        },
-    comments: [commentSchema],    
+    comments: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Comment'
+     }],    
   }, {
     timestamps: true
   });

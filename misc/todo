@@ -1,9 +1,14 @@
-28 make comments show up
-test adding comment
+35
+make sure view character page populates comments, and populates user at the same time
+change comment delete controller to work on ref model
+clear db to get rid of comments following old model
+
+
+
 add delete comment router
-add delete comment ui
 add delete comment controller
 test delete and validate oauth works because you can only delete while logged in
+make comment user populate
 add edit comment router
 add edit comment ui
 add edit comment controller

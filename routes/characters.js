@@ -12,7 +12,4 @@ router.post('/characters', charactersCtrl.create)
 router.put('/characters/:id', charactersCtrl.updateCharacter)
 
 
-// Comments
-router.post('/characters/:id/comments',isLoggedIn, charactersCtrl.createComment)
-
-  module.exports = router;
+module.exports = router;
