@@ -1,8 +1,7 @@
-45
+46
 
 
 //
-make comment box only show up if you're logged in
 add maximum lenghts on some of the character and comment values in ui and on model
 make pictures work (copy not insta?)
 figure out styling

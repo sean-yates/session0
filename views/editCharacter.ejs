@@ -2,22 +2,22 @@
 
 <form action="/characters/<%= currentCharacter._id %>?_method=PUT" method="POST">
     Name:<br />
-    <input type="text" name="name" value="<%= currentCharacter.name %>"required><br />
+    <input type="text" name="name" maxlength="20" value="<%= currentCharacter.name %>" required><br />
     Image Link:<br />
     <input type="text" name="image" value="<%= currentCharacter.image %>"><br />
     System:<br />
-    <input type="text" name="system" value="<%= currentCharacter.system %>"required><br />
+    <input type="text" name="system" maxlength="20" value="<%= currentCharacter.system %>" required><br />
     Class:<br />
-    <input type="text" name="class" value="<%= currentCharacter.class %>"><br />
+    <input type="text" name="class" maxlength="20" value="<%= currentCharacter.class %>"><br />
     Intro:<br />
-    <input type="text" name="intro" value="<%= currentCharacter.intro %>"required><br />
+    <input type="text" name="intro" maxlength="128" value="<%= currentCharacter.intro %>" required><br />
     Height:<br />
-    <input type="text" name="height" value="<%= currentCharacter.height %>"><br />
+    <input type="text" name="height" maxlength="10" value="<%= currentCharacter.height %>"><br />
     Weight:<br />
-    <input type="text" name="weight" value="<%= currentCharacter.weight %>"><br />
+    <input type="text" name="weight" maxlength="10" value="<%= currentCharacter.weight %>"><br />
     Physical Description:<br />
-    <input type="text" name="description" value="<%= currentCharacter.description %>"><br />
+    <textarea name="description" maxlength="500" style="width:250px;height:75px;"><%= currentCharacter.description %></textarea><br />
     About:<br />
-    <textarea name="about" style="width:250px;height:150px;"><%= currentCharacter.about %></textarea>
-    <input type="submit" value="edit character">
+    <textarea name="about" maxlength="10000" style="width:250px;height:150px;"><%= currentCharacter.about %></textarea>
+    <input type="submit" value="Update character">
     </form>

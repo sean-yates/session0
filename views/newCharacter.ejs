@@ -2,22 +2,22 @@
 
 <form action="/characters" method="POST">
     Name:<br />
-    <input type="text" name="name" required><br />
+    <input type="text" name="name" maxlength="20" required><br />
     Image Link:<br />
     <input type="text" name="image"><br />
     System:<br />
-    <input type="text" name="system" required><br />
+    <input type="text" name="system" maxlength="20" required><br />
     Class:<br />
-    <input type="text" name="class"><br />
+    <input type="text" name="class" maxlength="20"><br />
     Intro:<br />
-    <input type="text" name="intro" required><br />
+    <input type="text" name="intro" maxlength="128" required><br />
     Height:<br />
-    <input type="text" name="height"><br />
+    <input type="text" name="height" maxlength="10"><br />
     Weight:<br />
-    <input type="text" name="weight"><br />
+    <input type="text" name="weight" maxlength="10"><br />
     Physical Description:<br />
-    <input type="text" name="description"><br />
+    <textarea name="description" maxlength="500" style="width:250px;height:75px;"></textarea><br />
     About:<br />
-    <textarea name="about" style="width:250px;height:150px;"></textarea>
+    <textarea name="about" maxlength="10000" style="width:250px;height:150px;"></textarea>
     <input type="submit" value="add character">
     </form>
