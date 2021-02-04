@@ -11,11 +11,18 @@ about <%= currentCharacter.about %><br />
 user <%= currentCharacter.user.name %><br />
 <% if (currentUser !== undefined && currentUser._id.equals(currentCharacter.user._id)) { %>
     <form method="POST" action="/characters/<%= currentCharacter._id %>?_method=DELETE">
-    <button type="submit">Delete Character</button><% } %><br />
+    <button type="submit">Delete Character</button></form><% } %><br />
 
 
 
     <form action="/characters/<%= currentCharacter._id %>/comments" method="POST">
-        <textarea name="about" style="width:250px;height:150px;"></textarea>
+        <textarea name="body" style="width:250px;height:150px;"></textarea>
         <input type="submit" value="add comment">
         </form>
+        <% currentCharacter.comments.forEach( comment => { %>
+            body <%= comment.body %><br />
+            user <%= comment.user %><br />
+            <% if (currentUser !== undefined && currentUser._id.equals(comment.user)) { // may need to alter this after we figure out populating the user %>
+                <form method="POST" action="/characters/<%= currentCharacter._id %>/comments/<%= comment._id %>?_method=DELETE">
+                <button type="submit">Delete Comment</button><% } // edit comment link will go here as well%><br />
+        <% }) %>

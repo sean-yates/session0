@@ -107,13 +107,18 @@ function newCharacter(req, res) {
   // COMMENTS
 
   function createComment(req,res){
+    console.log('*****START OF CREATING A COMMENT******')
     req.body.user = req.user
+    
     db.Character.findById(req.params.id).
     exec(function(err, currentCharacter) {
       if(err) console.log(err);
 
       currentCharacter.comments.push(req.body)
 
-      res.redirect(`/characters/${req.params.id}`)
+      currentCharacter.save(function(err) {
+        if(err) console.log(err);
+        res.redirect(`/characters/${req.params.id}`)
+      })
   })
 }
