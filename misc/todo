@@ -1,10 +1,11 @@
-50 swap accoutn page to log in
- get spacing right on create character
-get spacing righton edit character
-get spacing right on view character
-get spacing right
-
+53
 
 //
 
 get website on heroku
+
+//
+little things:
+make view/edit /delete buttons pretty and consistent
+switch fonts?
+make navbar prettier/ right aligned?

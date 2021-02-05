@@ -2,6 +2,6 @@
 
 <form action="/characters/<%= currentCharacterId %>/comments/<%= currentComment._id %>?_method=PUT" method="POST">
     Comment:<br />
-    <textarea name="body" maxlength="500" style="width:250px;height:150px;"><%= currentComment.body %></textarea>
+    <textarea name="body" maxlength="500" style="width:250px;height:150px;"><%= currentComment.body %></textarea><br />
     <input type="submit" value="update comment">
     </form>

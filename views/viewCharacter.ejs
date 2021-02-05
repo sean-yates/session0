@@ -1,30 +1,44 @@
 <%- include('./partials/header') %>
-<%= currentCharacter.name %>
-image <%= currentCharacter.image %><br />
-created <%= currentCharacter.created %><br />
-system <%= currentCharacter.system %><br />
-intro <%= currentCharacter.intro %><br />
-height <%= currentCharacter.height %><br />
-weight <%= currentCharacter.weight %><br />
-description <%= currentCharacter.description %><br />
-about <%= currentCharacter.about %><br />
-user <%= currentCharacter.user.name %><br />
+
+<span class="viewTitle"><%= currentCharacter.name %> </span><br />
+<span class="viewCreated">created <%= currentCharacter.createdAt %> by <%= currentCharacter.user.name %></span><br />
 <% if (currentUser !== undefined && currentUser._id.equals(currentCharacter.user._id)) { %>
-    <form method="POST" action="/characters/<%= currentCharacter._id %>?_method=DELETE">
-    <button type="submit">Delete Character</button></form><% } %><br />
+    <a href="/characters/<%= currentCharacter._id %>/edit">Edit</a> <form class = "deleteButton" method="POST" action="/characters/<%= currentCharacter._id %>?_method=DELETE"><button type="submit">Delete</button></form><% } %><br /><br />
+<div>
+    <img class="viewPortrait" width="300" height="300" src="<%= currentCharacter.image %> " alt="">
+</div>
+<br />
+<span class="viewSectionHeader">Overview</span><br />
+System: <%= currentCharacter.system %><br />
+Class: <%= currentCharacter.class %><br />
+Intro: <%= currentCharacter.intro %><br />
+<br />
+<span class="viewSectionHeader">Physical Information</span><br />
+Height: <%= currentCharacter.height %><br />
+Weight: <%= currentCharacter.weight %><br />
+Description: <%= currentCharacter.description %><br />
+<br />
+<span class="viewSectionHeader">About</span><br />
+<%= currentCharacter.about %><br />
+<br />
 
 
-
-    <% if (currentUser) { %>
-        <form action="/characters/<%= currentCharacter._id %>/comments" method="POST">
-        <textarea name="body" maxlength="500" style="width:250px;height:150px;"></textarea>
-        <input type="submit" value="add comment">
-        </form>
-        <% } %>
+<!-- Comment Section -->
+<span class="viewSectionHeader">Comments:</span><br />
+<br />
         <% currentCharacter.comments.forEach( comment => { %>
-            body <%= comment.body %><br />
-            user <%= comment.user.name %><br />
+            <div class="comment">
+                <%= comment.body %><br />
+                By <%= comment.user.name %> at <%= comment.createdAt %><br />
             <% if (currentUser !== undefined && currentUser._id.equals(comment.user._id)) { %>
                 <form method="POST" action="/characters/<%= currentCharacter._id %>/comments/<%= comment._id %>?_method=DELETE">
-                <button type="submit">Delete Comment</button><a href="/characters/<%= currentCharacter._id %>/comments/<%= comment._id %>/edit">Edit comment</a><% } %><br />
+                <button type="submit">Delete</button><a href="/characters/<%= currentCharacter._id %>/comments/<%= comment._id %>/edit">Edit</a><% } %><br />
+            </div>
+            <br />
         <% }) %>
+        <% if (currentUser) { %>
+            <form action="/characters/<%= currentCharacter._id %>/comments" method="POST">
+            <textarea name="body" maxlength="500" style="width:250px;height:150px;"></textarea><br />
+            <input type="submit" value="add comment">
+            </form>
+            <% } %>

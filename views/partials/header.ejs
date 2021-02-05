@@ -10,7 +10,6 @@
 </head>
 <body>
   <nav>
-    <!-- <img src="/images/camera.svg">  <a href="/logout">Log Out</a> -->
     <a href="/characters/new" <%- title === 'Add Character' ? 'class="active"' : '' %>>Add Character</a>
     <a href="/characters" <%- title === 'Character Feed' ? 'class="active"' : '' %>>Character Feed</a>
     <%if (currentUser) { %>
@@ -20,4 +19,3 @@
     <%}%>
   </nav>
   <main>
-    <h1><%= title %></h1>
