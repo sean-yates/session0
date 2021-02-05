@@ -47,7 +47,6 @@ function newCharacter(req, res) {
   function deleteCharacter(req,res){
     db.Character.deleteOne({ _id: req.params.id }, function (err) {
       if(err) console.log(err);
-      console.log("Successful deletion");
     });
     res.redirect(`/characters`);
   }
@@ -64,9 +63,7 @@ function newCharacter(req, res) {
       }
     }).
     exec( function(err, currentCharacter) {
-      console.log(currentCharacter.comments)
       if(err) console.log(err);
-      console.log()
       res.render('viewCharacter', {
         currentCharacter,
         currentUser: req.user,

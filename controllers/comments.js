@@ -35,7 +35,6 @@ module.exports = {
 function deleteComment(req,res){
     db.Comment.deleteOne({ _id: req.params.cid }, function (err) {
         if(err) console.log(err);
-        console.log("Successful deletion");
         res.redirect(`/characters/${req.params.id}`)
       });
 }
