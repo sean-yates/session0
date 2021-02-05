@@ -2,11 +2,11 @@ const db = require('../models');
 
 module.exports = {
     isLoggedIn,
-    account
+    login
   };
 
-  function account(req,res){
-    res.render('account',{title:'My Account'})
+  function login(req,res){
+    res.redirect('/auth/google');
   }
 
 

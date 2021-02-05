@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const passport = require('passport');
-const { isLoggedIn, account } = require('../controllers/users');
+const { isLoggedIn, login } = require('../controllers/users');
 
 router.get('/', function(req, res) {
   res.render('feed', {
@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
   });
 });
 
-router.get('/account',isLoggedIn,account)
+router.get('/login',login)
 
 router.get('/auth/google', passport.authenticate('google', {scope: [ 'profile','email' ]}))
 router.get('/oauth2callback', passport.authenticate(

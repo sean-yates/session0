@@ -1,3 +1,25 @@
 body {
   background: lightblue;
 }
+
+.feedCharacter {
+  padding: 20px;
+  display: block;
+  overflow: auto;
+}
+
+.feedTitle {
+  font-size: 35px;
+}
+
+.systemClass {
+  font-size: 20px;
+}
+
+.portrait {
+  float: left;
+}
+
+.imageText {
+  padding-left: 5px;
+}
