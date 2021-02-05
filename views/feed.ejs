@@ -10,9 +10,9 @@
             <span class="imageText systemClass"><%= character.system %> <% if(character.class) {%> - <%= character.class %> <%}%> </span><br />
             <span class="imageText"><%= character.intro %></span><br />
             <span class="imageText createdByAt">created <%= character.createdAt %> by <%= character.user.name %></span><br />
-            <a class="imageText" href="/characters/<%= character._id %>">View</a>
+            <a class="imageText waves-effect waves-light btn" href="/characters/<%= character._id %>">View</a>
             <% if (currentUser !== undefined && currentUser._id.equals(character.user._id)) { %>
-                <a href="/characters/<%= character._id %>/edit">Edit</a> <form class = "deleteButton" method="POST" action="/characters/<%= character._id %>?_method=DELETE"><button type="submit">Delete</button></form><% } %><br />
+                <a class="waves-effect waves-light btn" href="/characters/<%= character._id %>/edit">Edit</a> <form class = "deleteButton" method="POST" action="/characters/<%= character._id %>?_method=DELETE"><button class="btn waves-effect waves-light" type="submit">Delete</button></form><% } %><br />
         </div>
     </div>
 <% }) %>

@@ -2,9 +2,12 @@ body {
   background: #1b262c;
   color: white;
 }
+
+input {
+  color: white;
+}
 .nav-wrapper {
   background-color: #0f4c75 !important;
-  color: #bbe1fa !important;
 }
 
 .feedCharacter {

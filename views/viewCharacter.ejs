@@ -6,7 +6,7 @@
 </div>
 <span class="createdByAt">created <%= currentCharacter.createdAt %> by <%= currentCharacter.user.name %></span><br />
 <% if (currentUser !== undefined && currentUser._id.equals(currentCharacter.user._id)) { %>
-    <a href="/characters/<%= currentCharacter._id %>/edit">Edit</a> <form class = "deleteButton" method="POST" action="/characters/<%= currentCharacter._id %>?_method=DELETE"><button type="submit">Delete</button></form><% } %><br /><br />
+    <a class="btn waves-effect waves-light" href="/characters/<%= currentCharacter._id %>/edit">Edit</a> <form class = "deleteButton" method="POST" action="/characters/<%= currentCharacter._id %>?_method=DELETE"><button class="btn waves-effect waves-light" type="submit">Delete</button></form><% } %><br /><br />
 <br />
 <span class="viewSectionHeader">Overview</span><br />
 System: <%= currentCharacter.system %><br />
@@ -32,13 +32,13 @@ Description: <%= currentCharacter.description %><br />
                 By <%= comment.user.name %> at <%= comment.createdAt %><br />
             <% if (currentUser !== undefined && currentUser._id.equals(comment.user._id)) { %>
                 <form method="POST" action="/characters/<%= currentCharacter._id %>/comments/<%= comment._id %>?_method=DELETE">
-                <button type="submit">Delete</button><a href="/characters/<%= currentCharacter._id %>/comments/<%= comment._id %>/edit">Edit</a><% } %><br />
+                <button class="btn waves-effect waves-light" type="submit">Delete</button> <a class="btn waves-effect waves-light" href="/characters/<%= currentCharacter._id %>/comments/<%= comment._id %>/edit">Edit</a><% } %><br />
             </div>
             <br />
         <% }) %>
         <% if (currentUser) { %>
             <form action="/characters/<%= currentCharacter._id %>/comments" method="POST">
             <textarea name="body" maxlength="500" style="width:250px;height:150px;"></textarea><br />
-            <input type="submit" value="add comment">
+            <input class="btn waves-effect waves-light" type="submit" value="add comment">
             </form>
             <% } %>
