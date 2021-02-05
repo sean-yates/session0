@@ -26,7 +26,10 @@ function feed(req, res, next) {
 // new character page
 
 function newCharacter(req, res) {
-  res.render('newCharacter', {title: 'New Character'})
+  res.render('newCharacter', {
+    title: 'New Character',
+    currentUser: req.user,
+  })
 }
 
 // creation of new character
