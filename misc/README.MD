@@ -8,10 +8,10 @@ Session 0
     - CSS 
     - MockFlow
     - JavaScript
-    - Jquery
     - MongoDB/Mongoose
     - Express
     - Google OAuth
+    - Google Materialize
 
 ## Getting Started:
 Site is available here:

@@ -1,5 +1,10 @@
 body {
-  background: lightblue;
+  background: #1b262c;
+  color: white;
+}
+.nav-wrapper {
+  background-color: #0f4c75 !important;
+  color: #bbe1fa !important;
 }
 
 .feedCharacter {
@@ -14,6 +19,9 @@ body {
 
 .systemClass {
   font-size: 20px;
+}
+.createdByAt {
+  font-size: 11px;
 }
 
 .portrait {

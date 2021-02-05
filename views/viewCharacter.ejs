@@ -1,12 +1,12 @@
 <%- include('./partials/header') %>
 
 <span class="viewTitle"><%= currentCharacter.name %> </span><br />
-<span class="viewCreated">created <%= currentCharacter.createdAt %> by <%= currentCharacter.user.name %></span><br />
-<% if (currentUser !== undefined && currentUser._id.equals(currentCharacter.user._id)) { %>
-    <a href="/characters/<%= currentCharacter._id %>/edit">Edit</a> <form class = "deleteButton" method="POST" action="/characters/<%= currentCharacter._id %>?_method=DELETE"><button type="submit">Delete</button></form><% } %><br /><br />
 <div>
     <img class="viewPortrait" width="300" height="300" src="<%= currentCharacter.image %> " alt="">
 </div>
+<span class="createdByAt">created <%= currentCharacter.createdAt %> by <%= currentCharacter.user.name %></span><br />
+<% if (currentUser !== undefined && currentUser._id.equals(currentCharacter.user._id)) { %>
+    <a href="/characters/<%= currentCharacter._id %>/edit">Edit</a> <form class = "deleteButton" method="POST" action="/characters/<%= currentCharacter._id %>?_method=DELETE"><button type="submit">Delete</button></form><% } %><br /><br />
 <br />
 <span class="viewSectionHeader">Overview</span><br />
 System: <%= currentCharacter.system %><br />

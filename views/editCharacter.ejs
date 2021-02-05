@@ -16,8 +16,8 @@
     Weight:<br />
     <input type="text" name="weight" maxlength="10" value="<%= currentCharacter.weight %>"><br />
     Physical Description:<br />
-    <textarea name="description" maxlength="500" style="width:250px;height:75px;"><%= currentCharacter.description %></textarea><br />
+    <input type="text" name="description" maxlength="500" value="<%= currentCharacter.description %>"><br />
     About:<br />
-    <textarea name="about" maxlength="10000" style="width:250px;height:150px;"><%= currentCharacter.about %></textarea>
+    <textarea name="about" maxlength="10000" style="width:100%;height:150px;"><%= currentCharacter.about %></textarea>
     <input type="submit" value="Update character">
     </form>

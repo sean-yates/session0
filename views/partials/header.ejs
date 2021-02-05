@@ -7,15 +7,29 @@
   <link rel="stylesheet" href="/styles/main.css">
   <script src="/scripts/main.js"></script>
   <title><%= title %></title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- JavaScript for Materialize -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
   <nav>
-    <a href="/characters/new" <%- title === 'Add Character' ? 'class="active"' : '' %>>Add Character</a>
-    <a href="/characters" <%- title === 'Character Feed' ? 'class="active"' : '' %>>Character Feed</a>
-    <%if (currentUser) { %>
-      <a href="/logout">Log Out</a>
-    <%} else { %>
-      <a href="/login">Log In</a>
-    <%}%>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Session 0</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/characters/new">Add Character</a></li>
+      <li><a href="/characters">Character Feed</a></li>
+      <%if (currentUser) { %>
+        <li><a href="/logout">Log Out</a></li>
+      <%} else { %>
+        <li><a href="/login">Log In</a></li>
+      <%}%>
+    </ul>
+    </div>
   </nav>
   <main>
