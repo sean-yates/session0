@@ -5,6 +5,18 @@ Session 0
 http://shielded-scrubland-06271.herokuapp.com/
 
 # Screenshots:
+Main feed:
+https://imgur.com/a/L5QxOfk
+
+View Character:
+https://imgur.com/5OFkWgi
+
+New Character:
+https://imgur.com/a/1GdzVel
+
+Edit character:
+https://imgur.com/a/RpXWHPY
+
 
 ## Technologies Used:
     - HTML
