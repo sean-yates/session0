@@ -10,6 +10,7 @@ router.get('/characters/:id', charactersCtrl.viewCharacter)
 router.get('/characters', charactersCtrl.feed)
 router.post('/characters', charactersCtrl.create)
 router.put('/characters/:id', charactersCtrl.updateCharacter)
+router.get('/', charactersCtrl.feed)
 
 
 module.exports = router;
