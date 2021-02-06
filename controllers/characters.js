@@ -8,7 +8,6 @@ module.exports = {
     viewCharacter,
     editCharacter,
     updateCharacter,
-    feedRedirect,
   };
 
 // show all characters
