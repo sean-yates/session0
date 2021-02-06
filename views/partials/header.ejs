@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Materialize CSS Framework -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="/css/style.css" />
     <!-- JavaScript for Materialize -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
@@ -24,7 +23,7 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="/characters/new">Add Character</a></li>
       <li><a href="/characters">Character Feed</a></li>
-      <%if (currentUser) { %>
+      <%if (currentUser !== undefined && currentUser) { %>
         <li><a href="/logout">Log Out</a></li>
       <%} else { %>
         <li><a href="/login">Log In</a></li>

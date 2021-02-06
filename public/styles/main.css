@@ -46,3 +46,7 @@ input {
 .viewSectionHeader {
   font-size: 25px;
 }
+
+textarea {
+  color: white;
+}

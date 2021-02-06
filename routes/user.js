@@ -2,12 +2,6 @@ const router = require('express').Router();
 const passport = require('passport');
 const { isLoggedIn, login } = require('../controllers/users');
 
-router.get('/', function(req, res) {
-  res.render('feed', {
-    user: req.user,
-    title: "Character Feed"
-  });
-});
 
 router.get('/login',login)
 

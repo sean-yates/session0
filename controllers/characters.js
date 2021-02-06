@@ -8,6 +8,7 @@ module.exports = {
     viewCharacter,
     editCharacter,
     updateCharacter,
+    feedRedirect,
   };
 
 // show all characters
@@ -109,4 +110,3 @@ function newCharacter(req, res) {
         res.redirect(`/characters/${id}`)
       });
   }
-
